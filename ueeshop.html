@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      font-family: 微软雅黑;
+    }
+    /* 头部样式 */
+    header{
+      width: 980px;
+      height: 96px;
+      background-color: #fbfdfd;
+    }
+    header>div+div{
+      margin-left: 50px;
+    }
+    header>div:first-child{
+      width: 179px;
+      height: 96px;
+      float: left;
+      line-height: 96px;
+      text-align: center;
+      margin-left: 30px;
+    }
+
+    header>div:last-child{
+      width: 700px;
+      height: 73px;
+      float: left;
+    }
+    ul{
+      list-style: none;
+    }
+    header>div>ul{
+      width: 600px;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    header ul>li{
+      font-size: 16px;
+      color:#333;
+    }
+    header ul>li:hover{
+      color:#0db083;
+    }
+    header>div>ul>li:hover>div{
+      display: block;
+    }
+    #h_r>ul>li>div{
+      width: 120px;
+      height: 180px;
+      background-color: #fff;
+      padding: 10px;
+      position: absolute;
+      z-index: 10;
+    }
+    .hidden{
+      display: none;
+    }
+    #h_r>ul>li>div>ul>li{
+     margin-bottom: 20px;
+     font-size: 14px;
+   }
+   /* 中部样式 */
+   h2,.title{
+     color: #333;
+   }
+   h4,.sectitle{
+     color: #555;
+   }
+   #m>img{
+     width: 980px;
+     height: 300px;
+   }
+   .m_m{
+     position: absolute;
+     top: 150px;
+     left: 200px;
+     text-align: center;
+   }
+   /* 中部内容 */
+   .content{
+     width: 980px;
+     background-color: #fbfdfd;
+     overflow: hidden;
+   }
+   .content>div{
+     margin-top: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+   .content>div>div+div{
+    margin: 20px;
+   }
+   .title{
+     font-size: 36px;
+   }
+   .sectitle{
+     font-size: 16px;
+   }
+   /* 底部 */
+   .b{
+     width: 980px;
+     height: 159px;
+     margin-bottom: 50px;
+   }
+   .b>ul{
+     display: flex;
+     justify-content: space-around;
+   }
+   .b>ul>li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .b>ul>li>div:nth-child(2){
+     margin-top: 20px;
+    font-size: 18px;
+    color: #999;
+   }
+   .b>ul>li>div:nth-child(3){
+     margin-top: 10px;
+     font-size: 16px;
+     color: #0db083;
+   }
+   /* 脚 */
+   footer{
+     background-color: #273037;
+     width: 980px;
+     height: 433px;
+   }
+   #f_l{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     float: left;
+     margin-top: 50px;
+     margin-left: 60px;
+   }
+   #f_l>div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+   }
+   #f_l>div:last-child>img{
+     width: 120px
+   }
+   #f_l div>span:first-child{
+     color: #fff;
+   }
+   #f_l div>span:last-child{
+     color: #0cba92;
+   }
+   #f_r{
+     margin-top: 30px;
+     float: left;
+     margin-left: 40px;
+   }
+   #f_r ul>li{
+     color: #a8adb0;
+     margin-bottom: 10px;
+   }
+   #f_r ul>li:first-child{
+     color: #fff;
+     margin-bottom: 20px;
+   }
+   #f_r>div{
+     display: flex;
+   }
+   #f_r>div>ul{
+     margin-left: 30px;
+   }
+  </style>
+</head>
+<body>
+  <!-- 头 -->
+  <header>
+    <div id="h_l">
+      <img src="./img2/ueeshoplogo.png" alt="">
+    </div>
+    <div id="h_r">
+      <ul>
+        <li>
+          首页
+          <div class="hidden">
+            <ul>
+              <li>模板</li>
+              <li>价格</li>
+              <li>优势</li>
+              <li>功能</li>
+              <li>定制</li>
+            </ul>
+          </div>
+        </li>
+        <li>B2C店铺
+          <div class="hidden">
+            <ul>
+              <li>价格</li>
+              <li>模板</li>
+              <li>定制</li>
+              <li>功能</li>
+              <li>优势</li>
+            </ul>
+          </div>
+        </li>
+        <li>B2B官网
+          <div class="hidden">
+            <ul>
+              <li>定制</li>
+              <li>模板</li>
+              <li>功能</li>
+              <li>优势</li>
+              <li>价格</li>
+            </ul>
+          </div>
+        </li>
+        <li>服务
+          <div class="hidden">
+            <ul>
+              <li>模板</li>
+              <li>功能</li>
+              <li>定制</li>
+              <li>价格</li>
+              <li>优势</li>
+            </ul>
+          </div>
+        </li>
+        <li>解决方案
+          <div class="hidden">
+            <ul>
+              <li>定制</li>
+              <li>功能</li>
+              <li>模板</li>
+              <li>优势</li>
+              <li>价格</li>
+            </ul>
+          </div>
+        </li>
+        <li>简介
+          <div class="hidden">
+            <ul>
+              <li>功能</li>
+              <li>模板</li>
+              <li>定制</li>
+              <li>价格</li>
+              <li>优势</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      
+    </div>
+  </header>
+  <!-- 中部背景图 -->
+  <div id="m">
+    <img src="./img2/case_ban.jpeg" alt="">
+    <div class="m_m">
+      <h2>在线搭建外贸B2B营销型官网</h2>
+      <h4>多语言、自动翻译、智能SEO等更智能的建站平台，让你坐等全球客户询盘</h4>
+    </div>
+  </div>
+  <!-- 中部内容区域 -->
+  <div class="content">
+    <div>
+      <div class="title">品牌官网从策划开始</div>
+      <div class="sectitle">深入了解品牌的理念与产品的特点之后，对网站受众进行分析；策划出符合品牌定位、产品核心 
+      </div>
+      <div class="sectitle">竞争力体现和客户浏览体验的方案</div>
+      <div class="pic">
+        <img src="./img2/pic0.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div>
+      <div class="title">有灵魂的风格设计</div>
+      <div class="sectitle">Ueeshop设计团队，用营销思维进行内容布局，构建简洁、视觉聚焦的设计风格。结合产品  
+      </div>
+      <div class="sectitle"> 特点，精心挑选合适素材，画龙点睛的网页特效，提升首页的浏览质感。</div>
+      <div class="pic">
+        <img src="./img2/pic1.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div>
+      <div class="title">高效的SEO优化</div>
+      <div class="sectitle">做好网站内部SEO优化，Ueeshop后台可设置关键词、标题标签以及alt图片标签的定义，符合收录规则的网站结构。  
+      </div>
+      <div class="sectitle">  网站前台设置醒目的询盘按钮，引导用户发送询盘，并且设置社交分享链接，方便传播。</div>
+      <div class="pic">
+        <img src="./img2/f3f9e99cf1.jpeg" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- 底部 -->
+  <div class="b">
+    <ul>
+      <li>
+        <div>
+          <img src="./img2/tact0.png" alt="">
+        </div>
+        <div>留言咨询</div>
+        <div>前往留言板填写消息</div>
+      </li>
+      <li>
+        <div>
+          <img src="./img2/tact1.png" alt="">
+        </div>
+        <div>邮件咨询</div>
+        <div>320006225@qq.com</div>
+      </li>
+      <li>
+        <div>
+          <img src="./img2/tact2.png" alt="">
+        </div>
+        <div>电话沟通</div>
+        <div>400-9620-018</div>
+      </li>
+      <li>
+        <div>
+          <img src="./img2/tact3.png" alt="">
+        </div>
+        <div>欢迎来访</div>
+        <div>
+          广州市越秀区越秀南路185号
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- 脚 -->
+  <footer>
+    <div>
+      <div id="f_l">
+        <div>
+          <div>
+            <img src="./img2/phone3.png" alt="">
+          </div>
+          <div>
+            <span>咨询电话</span>
+            <br>
+            <span>400-9620-018</span>
+          </div>
+        </div>
+        <div>
+          <img src="./img2/6b8d235cbf.png" alt="">
+        </div>
+      </div>
+      <div id="f_r">
+        <div>
+          <ul>
+            <li>B2C店铺</li>
+            <li>模版</li>
+            <li>价格</li>
+            <li>优势</li>
+            <li>功能</li>
+            <li>定制</li>
+            <li>区别</li>
+          </ul>
+          <ul>
+            <li>B2B官网</li>
+            <li>模版</li>
+            <li>价格</li>
+            <li>功能</li>
+            <li>定制</li>
+          </ul>
+          <ul>
+            <li>营销</li>
+            <li>后台教程</li>
+            <li>营销课程</li>
+            <li>直播课程</li>
+            <li>干货文章</li>
+            <li>知识分享</li>
+          </ul>
+          <ul>
+            <li>简介</li>
+            <li>公司简介</li>
+            <li>最新消息</li>
+            <li>联系我们</li>
+            <li>生态资源</li>
+          </ul>
+        </div>
+      </div>
+      <div id="f_b"></div>
+    </div>
+  </footer>
+  <script src="./vendor/jquery-3.6.0.js"></script>
+  <script>
+    
+  </script>
+</body>
+</html>
